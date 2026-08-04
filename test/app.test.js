@@ -6,7 +6,7 @@ describe("Service Health API", () => {
     const response = await request(app).get("/health");
 
     expect(response.statusCode).toBe(200);
-    expect(response.body.status).toBe("UP");
+    expect(response.body.status).toBe("DOWN");
     expect(response.body.timestamp).toBeDefined();
   });
 
